@@ -1,191 +1,246 @@
-/* Created by Tivotal */
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* Google Fonts(Poppins) */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-* {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
 }
-
-body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #222;
-  color: #fff;
-  overflow: auto;
-  padding: 20px;
+body{
+    background: linear-gradient(330deg,#670454,#ee2482);
+    background-repeat: no-repeat;
 }
-
-.wrapper {
-  position: relative;
-  height: 730px;
-  width: 600px;
-  border: 2px solid transparent;
-  border-left-color: #FF8400;
-  border-right-color: #FF8400;
-  border-top-color: #670454;
-  border-bottom-color: #670454;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
 }
-
-.wrapper .image {
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(#FF8400, #FF8400, #FF8400, #670454);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  transition: 0.6s ease;
+.card-container{
+    position: relative;
+    width: 300px;
+    height: 420px;
+    background: #fff;
+    margin: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 1px 5px 10px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
 }
-
-.wrapper:hover .image {
-  height: 280px;
-  width: 280px;
-  top: 17%;
-  border-radius: 50%;
+.top-box{
+    background: #670454;
+    height: 120px;
+    border-radius: 30px;
+    padding: 20px 30px;
 }
-
-.wrapper .image img {
-  height: 250px;
-  width: 250px;
-  border-radius: 50%;
-  object-fit: cover;
+.top-menu{
+    display: flex;
+    justify-content: space-between;
 }
-
-.wrapper .content {
-  text-align: center;
-  font-weight: 500;
-  color: #fff;
-  position: absolute;
-  top: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  opacity: 0;
-  transition: 0.5s;
-  padding: 20px;
+.top-box i{
+    font-size: 22px;
 }
-
-.wrapper:hover .content {
-  opacity: 1;
-  transition-delay: 0.5s;
-  padding: 20px;
+.dropdown{
+    position: relative;
+    display: inline-block;
 }
-
-.wrapper .content span {
-  font-size: 50px;
-  letter-spacing: 1px;
-  opacity: 0;
-  display: block;
-  margin-bottom: 15px; /* Adjusted for spacing */
+.dropbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease-in-out;
 }
-
-.wrapper:hover .content span {
-  animation: anim 1s ease forwards;
+.dropdown-content{
+    display: none;
+    position: absolute;
+    width: 180px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.2);
+    overflow: hidden;
+    z-index: 10;
 }
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+/* Change the background color of the dropdown button when the dropdown content is shown*/
+.dropdown:hover .dropbtn{
+    box-shadow: inset 0px 0px 2px 1px #3845a1;
+}
+.menu-list{
+    display: flex;
+    flex-direction: column;
+}
+.menu-list a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #000;
+    padding: 10px 20px;
+}
+.menu-list a:hover{
+    background: #ffc9e2;
+}
+.more{
+    right: 0;
+    padding: 10px;
+}
+.skills-title{
+    font-size: 15px;
+    color: #ee2482;
+}
+/* Image Box*/
 
-@keyframes anim {
-  0% {
-    transform: translateY(200px);
+.image-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -75px auto 10px auto;
+    height: 160px;
+    width: 160px;
+    background: #fff;
+    border-radius: 50%;
+}
+.image-box img{
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0px 3px 2px 1px rgba(0,0,0,0.3);
+}
+/* User Infomation */
+.user-info .name{
+    display: flex;
+    justify-content: center;
+}
+.user-info .job{
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    color: #670454;
+}
+/* Social icons */
+.social-icons{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px 0;
+}
+.social-icon-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.social-icon-box span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #670454;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .4s;
+    z-index: 2;
+}
+.social-icon-box span:hover{
+    color: #fff;
+    box-shadow: inset 0 0 0 20px #670454;
+    transform: translateY(-5px);
+}
+.social-icon-box .social-icon-name{
+    position: absolute;
+    top: 0;
     opacity: 0;
-    filter: blur(5px);
-  }
-  100% {
-    transform: translateY(0px);
+    padding: 5px 20px;
+    font-size: 13px;
+    background: #670454;
+    color: #fff;
+    border-radius: 30px;
+    transition: all .3s cubic-bezier(0.07, -0.55, 0.265, 1.55);
+}
+.social-icon-box span:hover ~ .social-icon-name{
+    top: -45px;
     opacity: 1;
-    filter: blur(0px);
-  }
 }
+/* Hire Button*/
+.btn-box{
+    display: flex;
+    justify-content: center;
 
-.wrapper .content span:nth-child(2) {
-  font-size: 18px;
-  margin-bottom: 5px;
-  animation-delay: 0.2s;
 }
-
-.wrapper .content p {
-  font-size: 15px;
-  max-width: 300px;
-  margin-top: 5px; /* Added for spacing */
-  margin-bottom: 15px; /* Adjusted for spacing */
+.btn-box .btn{
+    width: 100px;
+    height: 40px;
+    background: linear-gradient(to right,#670454,#970079);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-right: 1%;
+    gap: 20px;
 }
-
-.wrapper:hover .content p {
-  animation: anim 1s ease forwards;
-  opacity: 0;
-  animation-delay: 0.4s;
+.btn-box .btn:hover{
+    background: linear-gradient(to right,#fb4aef,#9823db);
+}
+/* Animated circles */
+.circle-1{
+    position: absolute;
+    left: -20px;
+    top: 35%;
+    height: 50px;
+    width: 50px;
+    border: 2px dashed #c975fb;
+    border-radius: 50%;
+    animation: circle-1 5s ease-in-out infinite;
+}
+.circle-2{
+    position: absolute;
+    right: -20px;
+    bottom: -30px;
+    height: 100px;
+    width: 100px;
+    border: 2px dashed #c975fb;
+    border-radius: 50%;
+    animation: circle-2 15s ease-in-out infinite;
+}
+/* Circle-1 animation */
+@keyframes circle-1 {
+    50%{
+        left: -20px;
+        top: 40%;
+    }
+}
+/* Circle-1 animation */
+@keyframes circle-2 {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
 
 .button-container {
-  display: flex;
-  gap: 10px; /* Space between buttons */
-  margin-top: 15px; /* Added for spacing above buttons */
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
 
-.wrapper .content .btn {
-  width: 160px;
-  height: 70px;
-  background: #222;
-  border: 2px solid #FF8400;
-  color: #FF8400;
-  font-size: 15px;
-  font-weight: 600;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.5s;
-  margin-bottom: 20px;
+.giftcard-button {
+    text-decoration: none;
+    background-color: #a10070;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.wrapper:hover .content .btn {
-  animation: anim 1s ease forwards;
-  opacity: 0;
-  animation-delay: 0.6s;
-}
-
-.wrapper .content .btn:hover {
-  background: #670454;
-  color: #222;
-  box-shadow: 0 0 10px #670454;
-}
-
-.wrapper .content .icons {
-  display: flex;
-}
-
-.wrapper .content .icons i {
-  height: 40px;
-  width: 40px;
-  cursor: pointer;
-  border: 2px solid #FF8400;
-  margin-left: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FF8400;
-  transition: 0.4s;
-}
-
-.wrapper:hover .content .icons i {
-  animation: anim 1s ease forwards;
-  opacity: 0;
-  animation-delay: 0.8s;
-}
-
-.wrapper .content .icons i:nth-child(1) {
-  margin-left: 0px;
+.giftcard-button .giftcard-button:hover{
+    background: linear-gradient(to right,#fb4aef,#9823db);
 }
