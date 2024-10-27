@@ -6,89 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Lx Change</title>
+    <title>LX Change Links</title>
 </head>
 <body>
-    <div class="container">
-        <!------------------------------ First card container --------------------------------------->
-        <div class="card-container">
-            <div class="top-box">
-                <div class="top-menu">
-                    <!-------------------------------  First dropdown --------------------------------------->
-                    <div class="dropdown">
-                        <button class="dropbtn">
-                            <i data-feather="align-left"></i>
-                        </button>
-                        <div class="dropdown-content Menu">
-                            <div class="menu-list">
-                                <a href="https://wa.link/pfyaci" target="_blank">Trade crypto</a>
-                            </div>                            
-                        </div>
-                    </div>
-                    <!-------------------------------  Second dropdown --------------------------------------->
-                    <div class="dropdown">
-                        <button class="dropbtn">
-                            <i data-feather="more-vertical"></i>
-                        </button>
-                        <div class="dropdown-content more">
-                            <span class="skills-title"></span>
-                            <div class="skills-list"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-------------------------- End of top Box(Menu) ---------------------------------->
-
-            <div class="image-box">
-                <img src="lx.jpg" alt="user-profile">
-            </div>
-            <!-------------------------- End of Image Box ---------------------------------->
-
-            <div class="main-box">
-                <div class="user-info">
-                    <span class="name">LXCHANGE</span>
-                    <span class="job">BUY & SELL YOUR GIFTCARDS</span>
-                </div>
-                <!-------------------------- End of user information ---------------------------------->
-
-                <div class="social-icons"> 
-                    <a href="https://www.facebook.com/lxchange" target="_blank">
-                      <div class="social-icon-box">
-                        <span><i data-feather="facebook"></i></span>
-                        <p class="social-icon-name">Facebook</p>
-                      </div>
-                    </a>
-                    <a href="https://www.instagram.com/lxchangeofficial" target="_blank">
-                      <div class="social-icon-box">
-                        <span><i data-feather="instagram"></i></span>
-                        <p class="social-icon-name">Instagram</p>
-                      </div>
-                    </a>
-                  </div>
-                  
-                  </div>
-                  
-                <!---------------------------- End of Social icons ------------------------------>
-
-                <div class="button-container">
-                    <a href="https://wa.link/pfyaci" class="giftcard-button">Buy Giftcard</a>
-                    <a href="https://wa.link/pfyaci" class="giftcard-button">Sell Giftcard</a>
-                </div>                 
-                    </div>                    
-                </div>
-                <!---------------------------- End of button box ------------------------------>
-            </div>
-
-            <!---------------------------- Animated circles ------------------------------>
-            <div class="circle-1"></div>
-            <div class="circle-2"></div>
-            <!---------------------------- End of Animated circles ------------------------------>
+    <div class="linktree-container">
+        <!-- Profile Image and Name -->
+        <div class="profile">
+            <img src="images/lx.jpg" alt="user-profile" class="profile-image">
+            <h1 class="name">LXCHANGE</h1>
+            <p class="description">BUY & SELL YOUR GIFTCARDS</p>
         </div>
+
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <a href="https://www.facebook.com/lxchange" target="_blank" class="social-link">
+                <i data-feather="facebook"></i> 
+            </a>
+            <a href="https://www.instagram.com/lxchangeofficial" target="_blank" class="social-link">
+                <i data-feather="instagram"></i>
+            </a>
+        </div>
+
+        <!-- Main Links -->
+        <div class="link-buttons">
+            <a href="https://wa.link/pfyaci" target="_blank" class="link-button">Trade Crypto</a>
+            <a href="your-link-here" class="link-button">Buy Giftcard</a>
+            <a href="your-link-here" class="link-button">Sell Giftcard</a>
+        </div>
+
+        <!-- Optional Animated Elements -->
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
     </div>
 
     <!-- Feather Icons Script -->
     <script>
-        feather.replace();
+        feather.replace(); // This replaces all feather icons with SVGs
     </script>
 </body>
 </html>
