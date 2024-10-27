@@ -4,77 +4,81 @@
 * {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 body {
     background: linear-gradient(330deg, #670454, #ee2482);
-    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin: 0;
 }
 
-/* Linktree-style Container */
+/* Linktree Container */
 .linktree-container {
-    width: 320px;
+    width: 300px;
     padding: 20px;
     background: #fff;
     border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     text-align: center;
-    position: relative;
 }
 
 /* Profile Section */
-.profile {
-    margin-bottom: 15px;
-}
-
-.profile-image {
+.profile .profile-image {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 .name {
-    margin-top: 10px;
-    font-size: 20px;
-    color: #670454;
+    font-size: 24px;
     font-weight: 600;
+    color: #670454;
+    margin: 5px 0;
 }
 
 .description {
     font-size: 14px;
     color: #a10070;
+    margin-bottom: 20px;
 }
 
-/* Social Media Links */
+/* About Section */
+.about {
+    font-size: 14px;
+    color: #670454;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+/* Social Links */
 .social-links {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 .social-link {
+    color: #670454;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 35px;
     height: 35px;
-    background: #670454;
-    color: white;
+    border: 2px solid #670454;
     border-radius: 50%;
-    text-decoration: none;
-    transition: background 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .social-link:hover {
-    background: #a10070;
+    background-color: #670454;
+    color: #fff;
 }
 
 /* Link Buttons */
@@ -85,17 +89,18 @@ body {
 }
 
 .link-button {
+    display: block;
     text-decoration: none;
     background-color: #a10070;
-    color: white;
-    padding: 12px 0;
-    border-radius: 5px;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 10px;
     font-weight: 500;
-    transition: background 0.3s;
+    transition: background-color 0.3s;
 }
 
 .link-button:hover {
-    background: linear-gradient(to right, #fb4aef, #9823db);
+    background-color: #ee2482;
 }
 
 /* Optional Animated Circles */
@@ -104,36 +109,25 @@ body {
     position: absolute;
     border: 2px dashed #c975fb;
     border-radius: 50%;
+    animation: circle-animation 15s linear infinite;
+    z-index: -1;
 }
 
 .circle-1 {
-    left: -20px;
-    top: 35%;
-    height: 50px;
-    width: 50px;
-    animation: circle-1 5s ease-in-out infinite;
+    left: -30px;
+    top: 40%;
+    width: 60px;
+    height: 60px;
 }
 
 .circle-2 {
-    right: -20px;
-    bottom: -30px;
-    height: 100px;
-    width: 100px;
-    animation: circle-2 15s ease-in-out infinite;
+    right: -50px;
+    bottom: -40px;
+    width: 120px;
+    height: 120px;
 }
 
-@keyframes circle-1 {
-    50% {
-        left: -20px;
-        top: 40%;
-    }
-}
-
-@keyframes circle-2 {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+@keyframes circle-animation {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
 }
